@@ -26,7 +26,8 @@ window.onload = function(){
     btn.type = "button";
     btn.value = "調整視窗大小";
 
-    //document.querySelector(".mobilebar-avatars.bg-300").prepend(btn);
+    if(document.querySelector(".mobilebar-avatar"))
+    document.querySelector(".mobilebar-avatar").prepend(btn);
     document.body.prepend(btn);
 
 
