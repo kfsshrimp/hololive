@@ -14,9 +14,10 @@ window.onload = function(){
 
     var btn = document.createElement("input");
     btn.addEventListener("click",function(){
+        alert(document.querySelector(".live-list").outerHTML);
         document.querySelectorAll("iframe").forEach( function(yt){
 
-            alert(document.querySelector(".live-list").outerHTML);
+            
             yt.style.height = yt.style.height.split("px")[0]/2 + "px";
             yt.style.width = yt.style.width.split("px")[0]/2 + "px";
         });
