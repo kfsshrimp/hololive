@@ -29,7 +29,8 @@ window.onload = function(){
         if(document.querySelector(".md-layout.live-videos"))
         {
             clearInterval(_t);
-            document.querySelector(".md-layout.live-videos").appendChild(btn);
+            document.body.prepend(btn);
+            //document.querySelector(".md-layout.live-videos").appendChild(btn);
         }
     },100);
 
@@ -47,7 +48,8 @@ window.onload = function(){
             if(document.querySelector(".md-layout.live-videos"))
             {
                 clearInterval(_t);
-                document.querySelector(".md-layout.live-videos").appendChild(btn);
+                document.body.prepend(btn);
+                //document.querySelector(".md-layout.live-videos").appendChild(btn);
             }
         },100);
 
