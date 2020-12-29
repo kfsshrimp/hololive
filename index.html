@@ -8,7 +8,8 @@
 <script>
 window.onload = function(){
     document.body.addEventListener("click",function(){
-        document.querySelector(".holotools-logo").remove();
+        if(document.querySelector(".holotools-logo"))
+            document.querySelector(".holotools-logo").remove();
     });
     document.querySelector(".holotools-logo").remove();
     localStorage.rulePauseOther = 0;
