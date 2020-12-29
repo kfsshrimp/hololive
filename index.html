@@ -20,6 +20,8 @@ window.onload = function(){
     btn.type = "button";
     btn.value = "調整視窗大小";
 
+    document.body.prepend(btn);
+
     var _s = 0;
     var _t = setInterval(function(){
         _s++;
@@ -28,9 +30,8 @@ window.onload = function(){
 
         if(document.querySelector(".md-layout.live-videos"))
         {
-            alert('test');
             clearInterval(_t);
-            document.body.prepend(btn);
+            //document.body.prepend(btn);
             //document.querySelector(".md-layout.live-videos").appendChild(btn);
         }
     },100);
