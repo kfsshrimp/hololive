@@ -7,11 +7,54 @@
 <script src="https://hololive.jetri.co/index.9b6788e13441b660e30c.js"></script>
 <script>
 window.onload = function(){
+    var _t,_s=0;
+
+    if(document.querySelector(".holotools-logo"))
+        document.querySelector(".holotools-logo").remove();
+
+    var btn = document.createElement("input");
+    btn.addEventListener("click",function(){
+        document.querySelectorAll("div.live-control-button.bg-300 .md-icon.md-icon-font.md-theme-holodark")[1].click();
+    });
+    btn.style.cursor = "pointer";
+    btn.type = "button";
+    btn.value = "調整視窗大小";
+
+    var _s = 0;
+    var _t = setInterval(function(){
+        _s++;
+        if(_s>30) clearInterval(_t);
+        console.log(_s);
+
+        if(document.querySelector(".md-layout.live-videos"))
+        {
+            clearInterval(_t);
+            document.querySelector(".md-layout.live-videos").appendChild(btn);
+        }
+    },100);
+
+
     document.body.addEventListener("click",function(){
         if(document.querySelector(".holotools-logo"))
             document.querySelector(".holotools-logo").remove();
+
+        clearInterval(_t);
+        _t = setInterval(function(){
+            _s++;
+            if(_s>30) clearInterval(_t);
+            console.log(_s);
+
+            if(document.querySelector(".md-layout.live-videos"))
+            {
+                clearInterval(_t);
+                document.querySelector(".md-layout.live-videos").appendChild(btn);
+            }
+        },100);
+
     });
-    document.querySelector(".holotools-logo").remove();
+
     localStorage.rulePauseOther = 0;
-}</script>
+}
+
+</script>
 
