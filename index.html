@@ -16,6 +16,7 @@ window.onload = function(){
     btn.addEventListener("click",function(){
         document.querySelectorAll("iframe").forEach( function(yt){
 
+            alert(document.querySelector(".live-list").outerHTML);
             yt.style.height = yt.style.height.split("px")[0]/2 + "px";
             yt.style.width = yt.style.width.split("px")[0]/2 + "px";
         });
