@@ -1,43 +1,19 @@
 <link href="https://hololive.jetri.co/index.css" rel="stylesheet">
 
-
 <body></body>
 
 <script src="https://hololive.jetri.co/polyfill.9b6788e13441b660e30c.js"></script>
 <script src="https://hololive.jetri.co/index.9b6788e13441b660e30c.js"></script>
 <script>
 window.onload = function(){
-    var _t,_s=0;
 
     if(document.querySelector(".holotools-logo"))
         document.querySelector(".holotools-logo").remove();
 
-    var btn = document.createElement("input");
-    btn.addEventListener("click",function(){
-        alert(document.querySelectorAll("img")[0].parentElement.parentElement.outerHTML);
-        document.querySelectorAll("iframe").forEach( function(yt){
-
-            
-            yt.style.height = yt.style.height.split("px")[0]/2 + "px";
-            yt.style.width = yt.style.width.split("px")[0]/2 + "px";
-        });
-    });
-    btn.style.cursor = "pointer";
-    btn.type = "button";
-    btn.value = "調整視窗大小";
-
-    if(document.querySelector(".mobilebar-avatar"))
-    document.querySelector(".mobilebar-avatar").prepend(btn);
-    document.body.prepend(btn);
-
-
-
     document.body.addEventListener("click",function(){
+
         if(document.querySelector(".holotools-logo"))
             document.querySelector(".holotools-logo").remove();
-
-       
-        
     });
 
     localStorage.rulePauseOther = 0;
