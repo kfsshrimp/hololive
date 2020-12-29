@@ -14,7 +14,7 @@ window.onload = function(){
 
     var btn = document.createElement("input");
     btn.addEventListener("click",function(){
-        alert(document.querySelector(".live-list").outerHTML);
+        alert(document.querySelectorAll("div")[0].outerHTML);
         document.querySelectorAll("iframe").forEach( function(yt){
 
             
