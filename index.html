@@ -14,7 +14,7 @@ window.onload = function(){
 
     var btn = document.createElement("input");
     btn.addEventListener("click",function(){
-        alert(document.querySelectorAll("img")[0].parentElement.parentElement.parentElement.outerHTML);
+        alert(document.querySelectorAll("img")[0].parentElement.parentElement.outerHTML);
         document.querySelectorAll("iframe").forEach( function(yt){
 
             
@@ -26,7 +26,8 @@ window.onload = function(){
     btn.type = "button";
     btn.value = "調整視窗大小";
 
-    document.querySelector(".mobilebar-avatars.bg-300").prepend(btn);
+    //document.querySelector(".mobilebar-avatars.bg-300").prepend(btn);
+    document.body.prepend(btn);
 
 
 
