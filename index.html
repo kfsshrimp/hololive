@@ -14,7 +14,7 @@ window.onload = function(){
 
     var btn = document.createElement("input");
     btn.addEventListener("click",function(){
-        alert(document.querySelector("div.container-watch").outerHTML);
+        alert(document.querySelectorAll("img")[0].parentElement.parentElement.parentElement.outerHTML);
         document.querySelectorAll("iframe").forEach( function(yt){
 
             
